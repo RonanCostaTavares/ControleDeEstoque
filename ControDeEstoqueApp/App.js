@@ -19,13 +19,6 @@ import EstoqueScreen from './screens/AppNavigator/EstoqueScreen';
 import PerfilScreen from './screens/AppNavigator/PerfilScreen';
 
 
-
-
-
-
-
-
-
 const AuthStack = createStackNavigator({
   Login: LoginScreen,
   Cadastro:CadastroScreen,
@@ -71,3 +64,20 @@ const App = createAppContainer(
 
 
 export default App;
+
+
+//Firebase
+import firebase from 'firebase'
+
+
+var firebaseConfig = {
+  apiKey: "AIzaSyCy-z4o9GROQGr9_JwTaX60_5xn35jGPvc",
+  authDomain: "baracapulco-6f876.firebaseapp.com",
+  databaseURL: "https://baracapulco-6f876.firebaseio.com",
+  projectId: "baracapulco-6f876",
+  storageBucket: "baracapulco-6f876.appspot.com",
+  messagingSenderId: "993551457234",
+  appId: "1:993551457234:web:324421c272f44828dc460b"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
