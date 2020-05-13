@@ -1,7 +1,9 @@
-import React,{Component} from 'react';
+import React,{Component, useCallback} from 'react';
 import { Alert} from 'react-native';
 
 import ModalLogin from '../../components/Login/LoginComponent';
+
+import Firebase from 'firebase'
 
 export default class LoginScreen extends Component{
 
@@ -27,8 +29,13 @@ export default class LoginScreen extends Component{
 
         if(this.state.email !== '') {
             if(this.state.senha !== ''){
-                Alert.alert('Logou', 'Logou Miseravi')
-                this.props.navigation.navigate("App")
+                Firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.senha).then(() => {
+                    this.props.navigation.navigate("App")
+                })
+                .catch(error => {
+                    Alert.alert('Error', error.message)
+                  });
+                
             }else {
                 Alert.alert('Por favor','Digite sua senha')
             }
