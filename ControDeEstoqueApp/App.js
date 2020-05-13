@@ -57,7 +57,7 @@ const App = createAppContainer(
           Auth: AuthStack,
       },
       {
-          initialRouteName: initialRoute = 'Auth',
+          initialRouteName: initialRoute = 'App',
       }
   )
 )
@@ -71,13 +71,14 @@ import firebase from 'firebase'
 
 
 var firebaseConfig = {
-  apiKey: "AIzaSyCy-z4o9GROQGr9_JwTaX60_5xn35jGPvc",
-  authDomain: "baracapulco-6f876.firebaseapp.com",
-  databaseURL: "https://baracapulco-6f876.firebaseio.com",
-  projectId: "baracapulco-6f876",
-  storageBucket: "baracapulco-6f876.appspot.com",
-  messagingSenderId: "993551457234",
-  appId: "1:993551457234:web:324421c272f44828dc460b"
+  apiKey: "AIzaSyAkrQIIdUGcdmksE02dbJQSrBX4XDLXlf4",
+  authDomain: "bardapiscina-e7099.firebaseapp.com",
+  databaseURL: "https://bardapiscina-e7099.firebaseio.com",
+  projectId: "bardapiscina-e7099",
+  storageBucket: "bardapiscina-e7099.appspot.com",
+  messagingSenderId: "772657669302",
+  appId: "1:772657669302:web:661ec3748f322a58dcb217",
+  measurementId: "G-M8H31FK8D2"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

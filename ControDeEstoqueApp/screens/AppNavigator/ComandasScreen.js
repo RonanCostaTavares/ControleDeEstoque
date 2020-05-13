@@ -4,7 +4,7 @@ import Firebase from 'firebase'
 
 
 import {ContainerSafearea, Card ,FooterArea} from '../../components/Geral/Structure';
-import { Button, InvisibleButton } from "../../components/Geral/Button";
+import ModalComanda from '../../components/Comandas/ComandaComponent';
 
 
 
@@ -12,21 +12,24 @@ export default class ComandasScreen extends Component{
 
     constructor(){
         super();
+
+        this.state={
+            Teste: [{"name":"APT 105/2", "id": 1},
+                    {"name":"APT 2595/1", "id": 2},
+                    {"name":"APT 159/2", "id": 3},
+                    {"name":"APT 1235/1", "id": 4}
+          ],
+        }
     }
 
-    Logout= () => {
-
-        Firebase.auth().signOut().then(() => this.props.navigation.navigate("Auth")).catch(error => {
-            Alert.alert('Error', error.message)
-          });;
-    }
+    
 
 
     render(){
         return (
-                    <ContainerSafearea>
-                        <Button text="Login" margin="30px" onPressButton={this.Logout} />
-                    </ContainerSafearea>
+                    <ModalComanda 
+                        comandas = {this.state.Teste}
+                    />
         )
     }
 }
