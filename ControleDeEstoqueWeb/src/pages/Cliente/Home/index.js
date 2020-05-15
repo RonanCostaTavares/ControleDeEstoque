@@ -1,25 +1,16 @@
-import React, { Component } from 'react';
-
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 import Media from './../../../media/media.png';
 import { Container, Logo } from './HomeStyle';
 
-class Home extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
+function Home(){
+    
+    return (
+        <Container>
+            <Logo src={ Media } alt=""/>
+        </Container>
+    );
+} 
 
-        };
-    }
-
-    render() {
-        return (
-            <Container>
-                <Logo src={ Media } alt=""/>
-            </Container>
-        );
-    }
-
-}
-
-export default Home;
+export default withRouter(Home);

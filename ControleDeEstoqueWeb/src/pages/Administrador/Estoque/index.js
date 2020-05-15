@@ -1,23 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import { Container, Back } from './EstoqueStyle';
+import { Container, Back } from './Style';
 
-class Estoque extends Component {
+function Estoque() {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        };
-    }
-
-    render() {
-        return (
-            <Container>
-                <Back to="/admin/home"> Voltar </Back>
-            </Container>
-        );
-    }
+    return (
+        <Container>
+            <Back to="/admin/home"> Voltar </Back>
+        </Container>
+    );
 
 }
 

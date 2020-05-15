@@ -10,8 +10,6 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-    width: 250px;
     height: 250px;
-    border-radius: 125px;
-
+    border-radius: 50%;
 `;

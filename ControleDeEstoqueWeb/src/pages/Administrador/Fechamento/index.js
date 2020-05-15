@@ -1,23 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import { Container, Back } from './FechamentoStyle';
+import { Container, Back } from './Style';
 
-class Fechamento extends Component {
+function Fechamento() {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        };
-    }
-
-    render() {
-        return (
-            <Container>
-                <Back to="/admin/home"> Voltar </Back>
-            </Container>
-        );
-    }
+    return (
+        <Container>
+            <Back to="/admin/home"> Voltar </Back>
+        </Container>
+    );
 
 }
 

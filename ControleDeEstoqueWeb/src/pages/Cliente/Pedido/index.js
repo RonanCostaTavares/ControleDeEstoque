@@ -1,25 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import { Container, Voltar } from './PedidoStyle';
+import Media from './../../../media/media.png';
+import { Container, Voltar, Logo } from './PedidoStyle';
 
-class Pedido extends Component {
+function Pedido(){
 
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        };
-    }
-
-    render() {
-        return (
-            <Container>
-                Fazer pedido
-                <br /><br /><br />
-                <Voltar to="/conta"> Voltar </Voltar>
-            </Container>
-        );
-    }
+    return(
+        <Container>
+            <Logo src={Media}/>
+            <h1>Home do Cliente</h1>
+            <br /><br /><br />
+            <Voltar to="/conta"> Voltar </Voltar>
+        </Container>
+    )
 
 }
 

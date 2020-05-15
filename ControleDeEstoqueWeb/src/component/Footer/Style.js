@@ -16,7 +16,7 @@ export const Rodape = styled.div`
 
 export const Copyright = styled(Link)`
     margin: 0;
-    font-size 1.2rem;
+    font-size: 1.2rem;
     text-decoration: none;
     font-family: bold;
     color: black;
@@ -30,7 +30,7 @@ export const Nav = styled.nav`
 
 export const Items = styled(Link)`
     padding: 0 10px;
-    font-size 1.2rem;
+    font-size: 1.2rem;
     text-decoration: none;
     font-family: bold;
     color: black;
