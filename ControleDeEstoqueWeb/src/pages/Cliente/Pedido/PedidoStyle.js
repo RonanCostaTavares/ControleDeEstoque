@@ -15,3 +15,8 @@ export const Voltar = styled(Link)`
     color: black;
     font-size: 1.2rem;
 `;
+
+export const Logo = styled.img`
+    height: 250px;
+    border-radius: 50%;
+`;
