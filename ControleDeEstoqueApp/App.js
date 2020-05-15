@@ -11,10 +11,10 @@ import LoginScreen from './screens/AuthNavigator/LoginScreen';
 import CadastroScreen from './screens/AuthNavigator/CadastroScreen';
 import EsqueceSenhaScreen from './screens/AuthNavigator/EsqueceSenhaScreen';
 
-
-import BalanceteScreen from './screens/AppNavigator/BalanceteScreen';
-import ComandasScreen from './screens/AppNavigator/ComandasScreen';
-import CardapioScreen from './screens/AppNavigator/CardapioScreen';
+import ComandaDetalhe from './screens/AppNavigator/Comanda/ComandaDetalhe'
+import BalanceteScreen from './screens/AppNavigator/Balancete/BalanceteScreen';
+import ComandasScreen from './screens/AppNavigator/Comanda/ComandasScreen';
+import CardapioScreen from './screens/AppNavigator/Cardapio/CardapioScreen';
 import EstoqueScreen from './screens/AppNavigator/EstoqueScreen';
 import PerfilScreen from './screens/AppNavigator/PerfilScreen';
 
@@ -25,8 +25,18 @@ const AuthStack = createStackNavigator({
   EsqueSenha: EsqueceSenhaScreen,
 });
 
+const ComandaStack = createStackNavigator({
+  pedidos: ComandasScreen,
+  detalheComanda: ComandaDetalhe,
+},{
+  navigationOptions:{
+      headerShown:false
+  },
+  initialRoute: "pedidos"
+})
+
 const AppTabNavigator = createBottomTabNavigator({
-    Comanda: ComandasScreen,
+    Comanda: ComandaStack,
     Balancete: BalanceteScreen,
     Cardapio: CardapioScreen,
     Estoque: EstoqueScreen,

@@ -3,32 +3,11 @@ import React, {Component} from 'react';
 import {Text} from 'react-native';
 import {ContainerSafearea} from "../Geral/Structure";
 import styled from "styled-components";
+import { ScrollView } from 'react-native-gesture-handler';
 
-
-const FlatList = styled.FlatList`
-    width:100%;
-    background-color: blue;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-`;
-
-const Item = styled.TouchableOpacity`
-    border-radius: 5px;
-    margin: 5px 5px;
-    padding: 0px 15px;
-    justify-content:space-between;
-    flex-direction: row;
-    height:100px;
-    width:100px;
-    background-color: #F5F5F5;
-
-`;
-
-const ItemText = styled.Text`
-    justify-content:space-between;
-    color:#636060;
-
+const ViewTitle = styled.View`
+    width: 100%;
+    align-items:center;
 `;
 
 const ViewTeste = styled.View`
@@ -37,18 +16,20 @@ const ViewTeste = styled.View`
     flex-direction: row;
     justify-content:space-between;
     flex-wrap: wrap;
-
-
-
+    
 `;
 
-const ItemTeste = styled.View`
+const ItemTeste = styled.TouchableOpacity`
 
     margin-top: 10px;
+    justify-content: center;
     border: 2px solid black;
+    align-items:center;
     border-radius: 5px;
-    width: 100px;
+    width: 90px;
     height: 100px;
+    background-color: #F5F5F5;
+
 
 `;
 
@@ -60,25 +41,30 @@ export default class ModalComanda extends Component{
 
 
     render(){
-        return  <ContainerSafearea justify="center"   >
-                     
-                    <ViewTeste>
+        return  <ContainerSafearea justify="center" backColor='#ADD8E6'  >
+                    <ScrollView>
 
-                        {this.props.comandas.map((item) => {
-                            return(
+                        <ViewTitle >
+                            <Text style={{fontSize: 30}}>{this.props.nomeLabel}</Text>
+                        </ViewTitle>
 
-                                <ItemTeste>
-                                    <Text>{item.name}</Text>
-                                </ItemTeste>
-                            )
+                        <ViewTeste>
+
+                            {this.props.comandas.map((item) => {
+                                return(
+
+                                    <ItemTeste onPress={this.props.nextTelaComanda}>
+                                        <Text>{item.name}</Text>
+                                    </ItemTeste>
+                                )
+                                
+
+                            })}
+                            
                             
 
-                        })}
-                        
-                        
-
-                    </ViewTeste>
-                   
+                        </ViewTeste>
+                    </ScrollView>
 
                 </ContainerSafearea>
     }

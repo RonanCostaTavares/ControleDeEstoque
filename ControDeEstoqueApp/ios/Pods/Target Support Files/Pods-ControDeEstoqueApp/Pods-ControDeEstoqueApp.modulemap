@@ -1,0 +1,6 @@
+module Pods_ControDeEstoqueApp {
+  umbrella header "Pods-ControDeEstoqueApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
