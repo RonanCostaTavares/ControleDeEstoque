@@ -1,26 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import { Navbar, Items } from './HeaderStyle';
+import { Navbar, Items } from './Style';
 
-class Header extends Component {
+function Header() {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        };
-    }
-
-    render() {
-        return (
-            <Navbar>
-                <nav>
-                    <Items to="/"> Bar da Piscina </Items>
-                    <Items to="/conta"> Entrar </Items>
-                </nav>
-            </Navbar>
-        );
-    }
+    return (
+        <Navbar>
+            <nav>
+                <Items to="/"> Bar da Piscina </Items>
+                <Items to="/conta"> Entrar </Items>
+            </nav>
+        </Navbar>
+    );
 
 }
 

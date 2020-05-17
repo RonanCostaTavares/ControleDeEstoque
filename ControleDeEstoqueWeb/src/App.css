@@ -1,16 +1,24 @@
 * {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
   
-  body {
-    background-color: #add9e6;
-    font: 100% sans-serif;
-    -webkit-font-smooth: antialiased !important;
-  }
+body {
+  background-color: #add9e6;
+  font: 100% sans-serif;
+  -webkit-font-smooth: antialiased !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder  { font-size: 0.789rem; }
+input:-moz-placeholder { font-size: 0.789rem; }
+textarea:-moz-placeholder { font-size: 0.789rem; }​
 
   /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

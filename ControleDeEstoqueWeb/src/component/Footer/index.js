@@ -1,27 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import { Rodape, Copyright,  Nav, Items } from './FooterStyle';
+import { Rodape, Copyright } from './Style';
 
-class Footer extends Component {
+function Footer() {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        };
-    }
-
-    render() {
-        return (
-            <Rodape>
-                <Copyright to="#">Copyright</Copyright>
-                <Nav>
-                    <Items to="#">Teste 1</Items>
-                    <Items to="#">Teste 2</Items>
-                </Nav>
-            </Rodape>
-        );
-    }
+    return (
+        <Rodape>
+            <Copyright to="#">Copyright</Copyright>
+        </Rodape>
+    );
 
 }
 

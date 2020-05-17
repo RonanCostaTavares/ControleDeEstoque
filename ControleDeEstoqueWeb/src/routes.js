@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 // Header & Footer
 import Header from './component/Header';
@@ -9,9 +9,8 @@ import Footer from './component/Footer';
 import Conta from './pages/Conta';
 
 // Cliente
-import Home from './pages/Cliente/Home';
-import Pedido from './pages/Cliente/Pedido';
-import { autenticado } from './pages/Cliente/Autenticado';
+import Home from './pages/Home';
+import Principal from './pages/Cliente';
 
 // Administrador
 import Admin from './pages/Administrador/Admin';
@@ -20,14 +19,6 @@ import Estoque from './pages/Administrador/Estoque';
 import Fechamento from './pages/Administrador/Fechamento';
 import Perfil from './pages/Administrador/Perfil';
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
-    <Route {...rest} render={props => (
-        autenticado() ? (
-            <Component {...props}/>
-        ) :
-            <Redirect to={{pathname: "/conta", state: { from: props.location }}}/>
-    )}/>
-)
 
 const Routes = () => {
 
@@ -37,7 +28,7 @@ const Routes = () => {
             <Switch>
                 <Route exact path = "/" component = { Home } />
                 <Route exact path = "/conta" component = { Conta } />
-                <PrivateRoute exact path = "/cliente/home" component = { Pedido } />
+                <Route exact path = "/cliente/home" component = { Principal } />
                 <Route exact path = "/admin/home" component = { Admin } />
                 <Route exact path = "/admin/comanda" component = { Comanda } />
                 <Route exact path = "/admin/estoque" component = { Estoque } />

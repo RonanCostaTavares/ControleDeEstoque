@@ -1,15 +1,15 @@
 import React from 'react';
-
+import firebase from './../../../firebase';
 import { White } from './Styles';
 
-function Pedido() {
+function Perfil() {
 
     return (
         <White>
-            <h1>Pedido</h1>
+            <h1>Perfil</h1>
         </White>
     );
 
 }
 
-export default Pedido;
+export default Perfil;

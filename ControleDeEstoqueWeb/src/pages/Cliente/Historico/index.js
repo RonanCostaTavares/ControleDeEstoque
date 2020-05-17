@@ -2,14 +2,14 @@ import React from 'react';
 
 import { White } from './Styles';
 
-function Pedido() {
+function Historico() {
 
     return (
         <White>
-            <h1>Pedido</h1>
+            <h1>Historico</h1>
         </White>
-    );
+    );  
 
 }
 
-export default Pedido;
+export default Historico;
